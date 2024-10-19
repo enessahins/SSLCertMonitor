@@ -52,3 +52,22 @@ First, edit the crontab file by running:
 
 Then, add a line to the crontab file like this:
 0 0 * * * /path/to/your/sslcertmonitor.sh
+
+
+## Outputs
+
+When the script runs, if any monitored domain's SSL certificate has 15 days or less of validity, it will send a notification email to the defined recipients. The email content includes the following information:
+
+* **Host**: Domain name  
+* **Issuer Organization**: The entity that issued the certificate  
+* **Days Remaining**: The remaining validity period of the certificate  
+* **Valid From**: The start date of the certificate's validity  
+* **Valid Till**: The end date of the certificate's validity  
+* **Certificate Expired**: Whether the certificate has expired  
+* **Certificate Valid**: Whether the certificate is currently valid  
+
+
+
+
+
+
